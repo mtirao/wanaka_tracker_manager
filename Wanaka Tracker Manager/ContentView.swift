@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var profile = ProfileViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if profile.isNeededAuthentication {
+            Rectangle()
+                .sheet(isPresented: $profile.isNeededAuthentication) {
+                    LoginView()
+                        .environment(profile)
+                }
+        }else {
+            MainView()
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
+    
+    @ViewBuilder
+    func MainView() -> some View {
+        Text("Hello World!")
+    }
 }

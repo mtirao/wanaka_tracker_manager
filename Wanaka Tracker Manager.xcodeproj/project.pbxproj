@@ -6,27 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		DA4E81912CEE5B86009DED5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA4E81772CEE5B81009DED5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA4E817E2CEE5B82009DED5A;
-			remoteInfo = "Wanaka Tracker Manager";
-		};
-		DA4E819B2CEE5B86009DED5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA4E81772CEE5B81009DED5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA4E817E2CEE5B82009DED5A;
-			remoteInfo = "Wanaka Tracker Manager";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		DA4E817F2CEE5B82009DED5A /* Wanaka Tracker Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wanaka Tracker Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4E81902CEE5B86009DED5A /* Wanaka Tracker ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wanaka Tracker ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4E819A2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wanaka Tracker ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,34 +16,10 @@
 			path = "Wanaka Tracker Manager";
 			sourceTree = "<group>";
 		};
-		DA4E81932CEE5B86009DED5A /* Wanaka Tracker ManagerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Wanaka Tracker ManagerTests";
-			sourceTree = "<group>";
-		};
-		DA4E819D2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Wanaka Tracker ManagerUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA4E817C2CEE5B82009DED5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA4E818D2CEE5B86009DED5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA4E81972CEE5B86009DED5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4E81812CEE5B82009DED5A /* Wanaka Tracker Manager */,
-				DA4E81932CEE5B86009DED5A /* Wanaka Tracker ManagerTests */,
-				DA4E819D2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests */,
 				DA4E81802CEE5B82009DED5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4E817F2CEE5B82009DED5A /* Wanaka Tracker Manager.app */,
-				DA4E81902CEE5B86009DED5A /* Wanaka Tracker ManagerTests.xctest */,
-				DA4E819A2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,52 +70,6 @@
 			productReference = DA4E817F2CEE5B82009DED5A /* Wanaka Tracker Manager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DA4E818F2CEE5B86009DED5A /* Wanaka Tracker ManagerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA4E81A72CEE5B86009DED5A /* Build configuration list for PBXNativeTarget "Wanaka Tracker ManagerTests" */;
-			buildPhases = (
-				DA4E818C2CEE5B86009DED5A /* Sources */,
-				DA4E818D2CEE5B86009DED5A /* Frameworks */,
-				DA4E818E2CEE5B86009DED5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DA4E81922CEE5B86009DED5A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DA4E81932CEE5B86009DED5A /* Wanaka Tracker ManagerTests */,
-			);
-			name = "Wanaka Tracker ManagerTests";
-			packageProductDependencies = (
-			);
-			productName = "Wanaka Tracker ManagerTests";
-			productReference = DA4E81902CEE5B86009DED5A /* Wanaka Tracker ManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DA4E81992CEE5B86009DED5A /* Wanaka Tracker ManagerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA4E81AA2CEE5B86009DED5A /* Build configuration list for PBXNativeTarget "Wanaka Tracker ManagerUITests" */;
-			buildPhases = (
-				DA4E81962CEE5B86009DED5A /* Sources */,
-				DA4E81972CEE5B86009DED5A /* Frameworks */,
-				DA4E81982CEE5B86009DED5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DA4E819C2CEE5B86009DED5A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DA4E819D2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests */,
-			);
-			name = "Wanaka Tracker ManagerUITests";
-			packageProductDependencies = (
-			);
-			productName = "Wanaka Tracker ManagerUITests";
-			productReference = DA4E819A2CEE5B86009DED5A /* Wanaka Tracker ManagerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,14 +82,6 @@
 				TargetAttributes = {
 					DA4E817E2CEE5B82009DED5A = {
 						CreatedOnToolsVersion = 16.1;
-					};
-					DA4E818F2CEE5B86009DED5A = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = DA4E817E2CEE5B82009DED5A;
-					};
-					DA4E81992CEE5B86009DED5A = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = DA4E817E2CEE5B82009DED5A;
 					};
 				};
 			};
@@ -201,28 +100,12 @@
 			projectRoot = "";
 			targets = (
 				DA4E817E2CEE5B82009DED5A /* Wanaka Tracker Manager */,
-				DA4E818F2CEE5B86009DED5A /* Wanaka Tracker ManagerTests */,
-				DA4E81992CEE5B86009DED5A /* Wanaka Tracker ManagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DA4E817D2CEE5B82009DED5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA4E818E2CEE5B86009DED5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA4E81982CEE5B86009DED5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +122,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA4E818C2CEE5B86009DED5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA4E81962CEE5B86009DED5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DA4E81922CEE5B86009DED5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA4E817E2CEE5B82009DED5A /* Wanaka Tracker Manager */;
-			targetProxy = DA4E81912CEE5B86009DED5A /* PBXContainerItemProxy */;
-		};
-		DA4E819C2CEE5B86009DED5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA4E817E2CEE5B82009DED5A /* Wanaka Tracker Manager */;
-			targetProxy = DA4E819B2CEE5B86009DED5A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DA4E81A22CEE5B86009DED5A /* Debug */ = {
@@ -392,11 +248,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Wanaka Tracker Manager/Wanaka_Tracker_Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Wanaka Tracker Manager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = E5YV4NK229;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -419,11 +276,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Wanaka Tracker Manager/Wanaka_Tracker_Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Wanaka Tracker Manager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = E5YV4NK229;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -438,74 +296,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		DA4E81A82CEE5B86009DED5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5YV4NK229;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ar.argsoftsolutions.Wanaka-Tracker-ManagerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wanaka Tracker Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wanaka Tracker Manager";
-			};
-			name = Debug;
-		};
-		DA4E81A92CEE5B86009DED5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5YV4NK229;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ar.argsoftsolutions.Wanaka-Tracker-ManagerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wanaka Tracker Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wanaka Tracker Manager";
-			};
-			name = Release;
-		};
-		DA4E81AB2CEE5B86009DED5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5YV4NK229;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ar.argsoftsolutions.Wanaka-Tracker-ManagerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Wanaka Tracker Manager";
-			};
-			name = Debug;
-		};
-		DA4E81AC2CEE5B86009DED5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5YV4NK229;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ar.argsoftsolutions.Wanaka-Tracker-ManagerUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Wanaka Tracker Manager";
 			};
 			name = Release;
 		};
@@ -526,24 +316,6 @@
 			buildConfigurations = (
 				DA4E81A52CEE5B86009DED5A /* Debug */,
 				DA4E81A62CEE5B86009DED5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DA4E81A72CEE5B86009DED5A /* Build configuration list for PBXNativeTarget "Wanaka Tracker ManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA4E81A82CEE5B86009DED5A /* Debug */,
-				DA4E81A92CEE5B86009DED5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DA4E81AA2CEE5B86009DED5A /* Build configuration list for PBXNativeTarget "Wanaka Tracker ManagerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA4E81AB2CEE5B86009DED5A /* Debug */,
-				DA4E81AC2CEE5B86009DED5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
