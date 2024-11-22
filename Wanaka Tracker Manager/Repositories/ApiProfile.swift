@@ -44,4 +44,9 @@ enum ApiProfile: Api {
             return nil as Data?
         }
     }
+    
+    var isAuthRequired: Bool {
+        if case .fetchProfile = self { return true }
+        return false
+    }
 }

@@ -9,12 +9,12 @@ import Foundation
 
 @MainActor
 protocol ProfileRepositoryProtocol {
-    func profile(id: String, token: String?) async throws -> Profile
+    func profile(id: String) async throws -> Profile
     func login(auth: Authentication) async throws -> JwtToken
 }
 
 final class ProfileRepositoryMock: ProfileRepositoryProtocol {
-    func profile(id: String, token: String?) async throws -> Profile {
+    func profile(id: String) async throws -> Profile {
         Profile(cellPhone: "", email: "", firstName: "", lastName: "", phone: "", userRole: nil, profileId:nil, gender: "", address: "", city: "")
     }
     
@@ -26,9 +26,9 @@ final class ProfileRepositoryMock: ProfileRepositoryProtocol {
 
 final class ProfileRepository: ProfileRepositoryProtocol {
     
-    func profile(id: String, token: String?) async throws -> Profile {
+    func profile(id: String) async throws -> Profile {
         let session = URLSession.shared
-        let (data, _) = try await session.data(for: ApiProfile.fetchProfile(profile: id).asUrlRequest(token: token))
+        let (data, _) = try await session.data(for: ApiProfile.fetchProfile(profile: id).asUrlRequest())
         let profileResult = try JSONDecoder().decode(Profile.self, from: data)
         return profileResult
     }

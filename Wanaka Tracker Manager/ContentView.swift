@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var profile = ProfileViewModel()
     
+    private let repository = ApplicationsViewModel()
+    
     var body: some View {
         if profile.isNeededAuthentication {
             Rectangle()
@@ -25,6 +27,18 @@ struct ContentView: View {
     
     @ViewBuilder
     func MainView() -> some View {
-        Text("Hello World!")
+        
+        NavigationSplitView {
+            List {
+                ForEach(repository.applications, id: \.id) { app in
+                    NavigationLink(app.name, destination: EventsView(appName: app.name))
+                }
+            }
+            .navigationTitle("Sidebar")
+        } detail: {
+            ContentUnavailableView("Select an element from the sidebar", systemImage: "doc.text.image.fill")
+        }.task { @MainActor in
+            await repository.applications()
+        }
     }
 }

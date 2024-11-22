@@ -47,7 +47,11 @@ import SwiftUI
             
             token = jwtToken.accessToken
             
-            isNeededAuthentication = false
+            if let token {
+                try Keychain.shared.store(token.data(using: .utf8)!)
+                isNeededAuthentication = false
+            }
+            isLoading = false
         }catch {
             isLoading = false
             print(error.localizedDescription)

@@ -17,11 +17,12 @@ protocol Api {
     var path: String { get }
     var method: String { get }
     var body: Data? { get }
-    func asUrlRequest(token: String?) throws -> URLRequest
+    var isAuthRequired: Bool { get } 
+    func asUrlRequest() throws -> URLRequest
 }
 
 extension Api {
-    func asUrlRequest(token: String? = nil) throws -> URLRequest {
+    func asUrlRequest() throws -> URLRequest {
         
         let urlString = server + path
         guard let url = URL(string: urlString) else {
@@ -32,8 +33,11 @@ extension Api {
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         request.httpMethod = method
-        if let token {
-            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        if isAuthRequired {
+            if let token = try? Keychain.shared.retrieve(), let tkn = String(data:token, encoding: .utf8) {
+                request.addValue("Bearer \(tkn)", forHTTPHeaderField: "Authorization")
+            }
         }
         request.httpBody = body
         
