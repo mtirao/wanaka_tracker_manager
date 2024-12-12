@@ -16,6 +16,7 @@ struct BusinessApplicationsModel: Identifiable {
 @MainActor
 @Observable class ApplicationsViewModel {
     var applications: [BusinessApplicationsModel] = []
+    var showAppSheet = false
     
     private let repository: any TrackerRepositoryProtocol
     
@@ -27,10 +28,21 @@ struct BusinessApplicationsModel: Identifiable {
         #endif
     }
     
+    func application(appName: String) async {
+        do {
+            try await repository.application(appName: appName)
+            showAppSheet = false
+            let apps = try await repository.application()
+            self.applications = apps.applications.compactMap{BusinessApplicationsModel(name: $0.name, owner: $0.owner ?? "")}
+        } catch {
+            applications = []
+        }
+    }
+    
     func applications() async {
         do {
             let apps = try await repository.application()
-            self.applications = apps.applications.compactMap{BusinessApplicationsModel(name: $0.name, owner: $0.owner)}
+            self.applications = apps.applications.compactMap{BusinessApplicationsModel(name: $0.name, owner: $0.owner ?? "")}
         } catch {
             applications = []
         }

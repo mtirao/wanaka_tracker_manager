@@ -10,10 +10,7 @@ import SwiftUI
 
 // Contains the possible destinations in our Router
 enum Route: Hashable {
-    case newTender
-    case newBudget
-    case newItem
-    case checkout(id: UUID?)
+    case newApp
 }
 
 

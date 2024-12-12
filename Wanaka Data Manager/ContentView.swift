@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var profile = ProfileViewModel()
     
-    private let repository = ApplicationsViewModel()
+    @State private var repository = ApplicationsViewModel()
     
     var body: some View {
         if profile.isNeededAuthentication {
@@ -29,16 +29,28 @@ struct ContentView: View {
     func MainView() -> some View {
         
         NavigationSplitView {
-            List {
-                ForEach(repository.applications, id: \.id) { app in
-                    NavigationLink(app.name, destination: EventsView(appName: app.name))
+            
+            VStack {
+                List {
+                    ForEach(repository.applications, id: \.id) { app in
+                        NavigationLink(app.name, destination: EventsView(appName: app.name))
+                    }
                 }
+                .navigationTitle("Sidebar")
+                Spacer()
+                Button("Add new Application", systemImage: "plus") {
+                    repository.showAppSheet = true
+                }
+                .buttonStyle(.plain)
+                .padding(.vertical, 16)
             }
-            .navigationTitle("Sidebar")
         } detail: {
             ContentUnavailableView("Select an element from the sidebar", systemImage: "doc.text.image.fill")
         }.task { @MainActor in
             await repository.applications()
+        }.sheet(isPresented: $repository.showAppSheet) {
+            NewAppView()
+                .environment(repository)
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct Application: Codable {
     let name: String
-    let owner: String
+    let owner: String?
 }
 
 struct Applications: Codable {
